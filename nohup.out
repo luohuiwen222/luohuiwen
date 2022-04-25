@@ -1,0 +1,30 @@
+Java HotSpot(TM) 64-Bit Server VM warning: Option UseConcMarkSweepGC was deprecated in version 9.0 and will likely be removed in a future release.
+[2022-01-01T18:51:35,771][ERROR][o.e.b.ElasticsearchUncaughtExceptionHandler] [node-1] uncaught exception in thread [main]
+org.elasticsearch.bootstrap.StartupException: java.lang.RuntimeException: can not run elasticsearch as root
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:163) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:150) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:75) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:116) ~[elasticsearch-cli-7.12.1.jar:7.12.1]
+	at org.elasticsearch.cli.Command.main(Command.java:79) ~[elasticsearch-cli-7.12.1.jar:7.12.1]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:115) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:81) ~[elasticsearch-7.12.1.jar:7.12.1]
+Caused by: java.lang.RuntimeException: can not run elasticsearch as root
+	at org.elasticsearch.bootstrap.Bootstrap.initializeNatives(Bootstrap.java:101) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:168) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:397) ~[elasticsearch-7.12.1.jar:7.12.1]
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:159) ~[elasticsearch-7.12.1.jar:7.12.1]
+	... 6 more
+uncaught exception in thread [main]
+java.lang.RuntimeException: can not run elasticsearch as root
+	at org.elasticsearch.bootstrap.Bootstrap.initializeNatives(Bootstrap.java:101)
+	at org.elasticsearch.bootstrap.Bootstrap.setup(Bootstrap.java:168)
+	at org.elasticsearch.bootstrap.Bootstrap.init(Bootstrap.java:397)
+	at org.elasticsearch.bootstrap.Elasticsearch.init(Elasticsearch.java:159)
+	at org.elasticsearch.bootstrap.Elasticsearch.execute(Elasticsearch.java:150)
+	at org.elasticsearch.cli.EnvironmentAwareCommand.execute(EnvironmentAwareCommand.java:75)
+	at org.elasticsearch.cli.Command.mainWithoutErrorHandling(Command.java:116)
+	at org.elasticsearch.cli.Command.main(Command.java:79)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:115)
+	at org.elasticsearch.bootstrap.Elasticsearch.main(Elasticsearch.java:81)
+For complete error details, refer to the log at /usr/local/elasticsearch-7.12.1/logs/elasticsearch.log
+2022-01-01 10:51:36,249785 UTC [3886] INFO  Main.cc@106 Parent process died - ML controller exiting
